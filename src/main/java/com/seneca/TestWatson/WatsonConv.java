@@ -27,10 +27,10 @@ public String mainMethod(String input, Map context )
 	public static MessageResponse conversationAPI(String input,Map context)
 	{
 		ConversationService service = new ConversationService("2017-11-17");
-		service.setUsernameAndPassword("2e5f4c89-5fc5-4b30-b3d2-bf93b8db72cb", "jRC2zLc0vlyV");
+		service.setUsernameAndPassword("username", "password");
 		MessageRequest newMessage = new MessageRequest.Builder()
 				.inputText(input).context(context).build();
-		String workspaceId = "c0002aee-4fac-4e4a-8f73-2d7526a614bc";
+		String workspaceId = "workspace id";
 		MessageResponse response = service.message(workspaceId, newMessage).execute();
 		return response;
 	}
